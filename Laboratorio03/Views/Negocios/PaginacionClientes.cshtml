@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Laboratorio03.Models.tb_clientes>
+@{
+    ViewBag.Title = "PaginacionClientes";
+}
+
+<h2>PaginacionClientes</h2>
+
+@Html.Partial("_PartialClientes")
+
+<div>
+    @for(int i=0; i<(int)ViewBag.numreg; i++)
+    {
+        @Html.ActionLink((i+1).ToString(), "PaginacionClientes", new {pag = 1}, new { @class = "btn btn-primary" })
+    }
+</div>
+

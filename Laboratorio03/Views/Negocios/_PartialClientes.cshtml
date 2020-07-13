@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Laboratorio03.Models.tb_clientes>
+
+@{
+    int c = 0;
+}
+<table class="table">
+    <tr>
+        <th>it</th>
+        <th>Codigo el Cliente</th>
+        <th>Nombre del Cliente</th>
+        <th>Direccion</th>
+        <th>Telefono</th>
+    </tr>
+    @foreach (var reg in Model)
+    {
+        c = c + 1;
+        <tr>
+            <td>c</td>
+            <td>@reg.IdCliente</td>
+            <td>@reg.NombreCia</td>
+            <td>@reg.Direccion</td>
+            <td>@reg.Telefono</td>
+        </tr>
+    }
+</table>
+
